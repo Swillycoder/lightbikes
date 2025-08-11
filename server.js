@@ -218,5 +218,5 @@ io.on('connection', socket => {
 // run server-side tick at moveDelay
 setInterval(performGameTick, moveDelay);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 server.listen(PORT, () => console.log('listening on', PORT));
