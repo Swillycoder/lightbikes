@@ -8,6 +8,10 @@ const io = new Server(server);
 
 app.use(express.static('.'));
 
+app.get('/', (req, res) => {
+  res.send('Hello from Lightbikes server!');
+});
+
 const WIDTH = 600;
 const HEIGHT = 600;
 const cellSize = 20;
