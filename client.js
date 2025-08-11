@@ -143,14 +143,15 @@ window.onload = () => {
 			if (e.code === 'KeyD') socket.emit('dir', 'right');
 		}
 
-		// Start: Enter (any player) -> server will only start if both players connected
-		if (e.code === 'Enter') {
-			socket.emit('start');
-		}
-		// Restart/back to lobby: 'P' after a winner
-		if (e.code === 'KeyP') {
-			console.log('Key pressed:', e.key);
-			socket.emit('restart');
-		}
-	});
+  // Start: Enter (any player) -> server will only start if both players connected
+  if (e.code === 'Enter') {
+    socket.emit('start');
+  }
+
+  // Restart/back to lobby: 'P' after a winner
+  if (e.code === 'KeyP') {
+    console.log('Key pressed:', e.key);
+    socket.emit('restart');
+  }
+});
 };
