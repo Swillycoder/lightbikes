@@ -1,5 +1,5 @@
 window.onload = () => {
-	const socket = io();
+	const socket = io('https://lightbikes-server.onrender.com');
 
 	// canvas + images
 	const canvas = document.getElementById('canvas');
